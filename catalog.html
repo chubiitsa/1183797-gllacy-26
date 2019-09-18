@@ -17,9 +17,49 @@
       <li><a href="">О Компании</a></li>
     </ul>
     <ul>
-      <li><a href="">Поиск</a></li>
-      <li><a href="">Вход</a></li>
-      <li><a href="">Корзина</a></li>
+      <li>
+        <a href="">Поиск</a>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <label for="search"></label>
+          <input id="search" type="text" placeholder="Крем-брюле">
+        </form>
+      </li>
+      <li>
+        <a href="">Вход</a>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="login"></label>
+            <input id="login" type="email" name="login" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="password"></label>
+            <input id="password" type="password" name="password" placeholder="••••••••">
+          </p>
+          <button type="submit">Войти</button>
+        </form>
+        <a href="">Забыли пароль?</a>
+        <a href="">Новая регистрация</a>
+      </li>
+      <li><a href="">2 товара</a>
+        <table>
+          <tr>
+            <td><button type="button" aria-label="Убрать из корзины">X</button></td>
+            <td><img src="img/product-1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33"></td>
+            <td>Пломбир с апельсиновым джемом</td>
+            <td>1,5 кг х <span>200 руб.</span></td>
+            <td>300 руб.</td>
+          </tr>
+          <tr>
+            <td><button type="button" aria-label="Убрать из корзины">X</button></td>
+            <td><img src="img/product-3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></td>
+            <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+            <td>1,5 кг х <span>300 руб.</span></td>
+            <td>450 руб.</td>
+          </tr>
+        </table>
+        <p>Итого: <span>750 руб.</span></p>
+        <a href="">Оформить заказ</a>
+      </li>
     </ul>
   </nav>
   <p>C 10 до 20, ежедневно
@@ -36,40 +76,57 @@
   </ul>
   <section>
     <h1>Сливочное мороженое</h1>
-    <form>
+    <form action="https://echo.htmlacademy.ru" method="post">
       <fieldset>
         <legend> Сортировка:</legend>
-        <select name="sorting">
-          <option value="popularity">по популярности</option>
-          <option value="price">по цене</option>
-        </select>
+        <label for="sorting">
+          <select id="sorting" name="sorting">
+            <option value="popularity">по популярности</option>
+            <option value="low-price-first">сначала недорогие</option>
+            <option value="high-price-first">сначала дорогие</option>
+            <option value="fat">по жирности</option>
+          </select>
+        </label>
       </fieldset>
       <fieldset>
         <legend>Цена: 100 руб. - 500 руб.</legend>
-        <input type="range" name="rubles" min="0" max="10">
+        <label for="price-range"></label>
+        <input id="price-range" type="range" name="rubles" min="0" max="10">
       </fieldset>
       <fieldset>
         <legend>Жирность:</legend>
-        <input type="radio" name="fat" value="0%" id="zero">
-        <label for="zero">0%</label>
-        <input type="radio" name="fat" value="10%" id="ten">
-        <label for="ten">до 10%</label>
-        <input type="radio" name="fat" value="30%" id="thirty">
-        <label for="thirty">до 30%</label>
-        <input type="radio" name="fat" value="more than 30%" id="more">
-        <label for="more">выше 30%</label>
+        <label for="zero">0%
+          <input id="zero" type="radio" name="fat" value="0%">
+        </label>
+          <label for="ten">до 10%
+        <input id="ten" type="radio" name="fat" value="10%" checked>
+          </label>
+        <label for="thirty">до 30%
+          <input id="thirty" type="radio" name="fat" value="30%">
+        </label>
+        <label for="more-than-thirty">выше 30%
+          <input id="more-than-thirty" type="radio" name="fat" value="more than 30%">
+        </label>
       </fieldset>
       <fieldset>
         <legend>Наполнители:</legend>
-        <input type="checkbox" name="chocolate" value="chocolate" checked>шоколадные
-        <input type="checkbox" name="sugar" value="sugar" checked>сахарные присыпки
-        <input type="checkbox" name="fruits" value="fruits">фрукты
-        <input type="checkbox" name="syrup" value="syrup">сиропы
-        <input type="checkbox" name="jam" value="jam">джемы
+        <label for="chocolate">
+          <input id="chocolate" type="checkbox" name="chocolate" checked>шоколадные
+        </label>
+        <label for="sugar">
+          <input id="sugar" type="checkbox" name="sugar" checked>сахарные присыпки
+        </label>
+        <label for="fruits">
+          <input id="fruits" type="checkbox" name="fruits">фрукты
+        </label>
+        <label for="syrup">
+          <input id="syrup" type="checkbox" name="syrup">сиропы
+        </label>
+        <label for="jam">
+          <input id="jam" type="checkbox" name="jam">джемы
+        </label>
       </fieldset>
-
       <button type="submit">Применить</button>
-
     </form>
   </section>
   <section>
@@ -168,24 +225,24 @@
       </li>
     </ul>
   </section>
-    <ul>
-      <li><a>Назад</a></li>
-      <li><a>1</a></li>
-      <li><a href="">2</a></li>
-      <li><a href="">3</a></li>
-      <li><a href="">4</a></li>
-      <li><a href="">5</a></li>
-      <li><a href="">Вперед</a></li>
-    </ul>
+  <ul>
+    <li><a>Назад</a></li>
+    <li><a>1</a></li>
+    <li><a href="" aria-label="Переход на страницу 2">2</a></li>
+    <li><a href="" aria-label="Переход на страницу 3">3</a></li>
+    <li><a href="" aria-label="Переход на страницу 4">4</a></li>
+    <li><a href="" aria-label="Переход на страницу 5">5</a></li>
+    <li><a href="" aria-label="Переход на следующую страницу">Вперед</a></li>
+  </ul>
 
 </main>
 
 <footer>
   <ul>
-    <li><a href=""></a></li> <!-- Twitter -->
-    <li><a href=""></a></li> <!-- Instagram -->
-    <li><a href=""></a></li> <!-- Facebook -->
-    <li><a href=""></a></li> <!-- Vkontakte -->
+    <li><a href="" aria-label="Глэйси в Твиттере"></a></li>
+    <li><a href="" aria-label="Глэйси в Инстаграм"></a></li>
+    <li><a href="" aria-label="Глэйски на Фэйсбуке"></a></li>
+    <li><a href="" aria-label="Глэйски во Вконтакте"></a></li>
   </ul>
   <ul>
     <li><a href="">Для поставщиков</a></li>
