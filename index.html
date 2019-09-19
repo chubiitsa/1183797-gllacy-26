@@ -13,10 +13,10 @@
     </a>
     <ul>
       <li>
-        <a href="catalog.html">Каталог</a>
+        <a href="">Каталог</a>
         <ul>
           <li><a href="">Новинки</a></li>
-          <li><a href="">Сливочное</a></li>
+          <li><a href="catalog.html">Сливочное</a></li>
           <li><a href="">Щербеты</a></li>
           <li><a href="">Фруктовый лед</a></li>
           <li><a href="">Мелорин</a></li>
@@ -30,7 +30,7 @@
         <a href="">Поиск</a>
         <form action="https://echo.htmlacademy.ru" method="get">
           <label for="search"></label>
-          <input id="search" type="text" placeholder="Крем-брюле">
+          <input id="search" type="search" placeholder="Крем-брюле">
         </form>
       </li>
       <li>
@@ -55,7 +55,7 @@
     </ul>
   </nav>
   <p>C 10 до 20, ежедневно
-    <a href="tel: +78124502525" aria-label="Телефон">8 812 450-25-25</a>
+    <a href="tel: +78124502525">8 812 450-25-25</a>
   </p>
 
 
@@ -95,35 +95,35 @@
     <ul>
       <li>
         <a href="">
-          <img src="img/product-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
-                        height="267">
+          <img src="img/product-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
         </a>
         <p>310&#8381;/<span>кг</span></p>
         <a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+        <a href="">Быстрый просмотр</a>
       </li>
       <li>
         <a href="">
-          <img src="img/product-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267"
-                        height="267">
+          <img src="img/product-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
         </a>
         <p>380&#8381;/<span>кг</span></p>
         <a href="">Сливочно-кофейное с кусочками шоколада</a>
+        <a href="">Быстрый просмотр</a>
       </li>
       <li>
         <a href="">
-          <img src="img/product-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267"
-                        height="267">
+          <img src="img/product-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
         </a>
         <p>355&#8381;/<span>кг</span></p>
         <a href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
+        <a href="">Быстрый просмотр</a>
       </li>
       <li>
         <a href="">
-          <img src="img/product-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267"
-                        height="267">
+          <img src="img/product-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
         </a>
         <p>415&#8381;/<span>кг</span></p>
         <a href="">Сливочное крем-брюле с карамельной подливкой</a>
+        <a href="">Быстрый просмотр</a>
       </li>
     </ul>
   </section>
@@ -155,7 +155,7 @@
     <h2 class="visually-hidden">Подписка</h2>
     <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем
       не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-    <label aria-label="Введите ваш e-mail, чтобы подписаться на рассылку">
+    <label class="visually-hidden">Введите ваш e-mail, чтобы подписаться на рассылку
       <input type="email" placeholder="email@example.com">
     </label>
     <button type="submit">Отправить</button>
@@ -170,8 +170,7 @@
     <a href="">Форма обратной связи</a>
   </div>
   <div>
-    <img src="img/map.png" alt="Карта проезда к адресу ул. Большая Конюшенная 19/8"
-         width="1200" height="430">
+    <img src="img/map.png" alt="Карта проезда к адресу ул. Большая Конюшенная 19/8" width="1200" height="430">
   </div>
 </main>
 
@@ -189,30 +188,32 @@
     <li><a href="">Экологические старндарты</a></li>
   </ul>
   <p>
-    <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg"
-                                                            alt="Логотип HTML Academy" width="40" height="40"></a>
+    <a href="https://htmlacademy.ru/intensive/htmlcss">
+      <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="40" height="40">
+    </a>
     Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
   </p>
 </footer>
 
-<h2 class="visually-hidden">Форма обратной связи</h2>
-<p>Мы обязательно вам ответим!</p>
+<section>
+<h2>Мы обязательно вам ответим!</h2>
 <form action="https://echo.htmlacademy.ru" method="get">
   <p>
-    <label for="contact-name" aria-label="Введите свои имя и фамилию"></label>
+    <label for="contact-name" class="visually-hidden">Введите свои имя и фамилию</label>
     <input id="contact-name" type="text" name="contact-name" placeholder="Имя Фамилия">
   </p>
   <p>
-    <label for="email" aria-label="Введите свой e-mail"></label>
+    <label for="email" class="visually-hidden">Введите свой e-mail</label>
     <input id="email" type="email" name="email" placeholder="email@example.com">
   </p>
   <p>
-    <label for="comment-text" aria-label="Внесите комментарий"></label>
+    <label for="comment-text" class="visually-hidden">Внесите комментарий</label>
     <textarea id="comment-text" name="comment-text" placeholder="В свободной форме"></textarea>
   </p>
   <button type="submit">Отправить</button>
 </form>
-<button type="button" aria-label="Закрыть модальное окно">X</button>
+<button type="button" aria-label="Закрыть форму обратной связи">X</button>
+</section>
 
 </body>
 </html>
