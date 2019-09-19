@@ -29,7 +29,7 @@
       <li>
         <a href="">Поиск</a>
         <form action="https://echo.htmlacademy.ru" method="get">
-          <label for="search"></label>
+          <label for="search" class="visually-hidden">Поиск</label>
           <input id="search" type="search" placeholder="Крем-брюле">
         </form>
       </li>
@@ -37,17 +37,19 @@
         <a href="">Вход</a>
         <form action="https://echo.htmlacademy.ru" method="post">
           <p>
-            <label for="login"></label>
+            <label for="login" class="visually-hidden">Логин</label>
             <input id="login" type="email" name="login" placeholder="email@example.com">
           </p>
           <p>
-            <label for="password"></label>
+            <label for="password" class="visually-hidden">Пароль</label>
             <input id="password" type="password" name="password" placeholder="••••••••">
           </p>
           <button type="submit">Войти</button>
         </form>
-        <a href="">Забыли пароль?</a>
-        <a href="">Новая регистрация</a>
+        <div>
+          <a href="">Забыли пароль?</a>
+          <a href="">Новая регистрация</a>
+        </div>
       </li>
       <li>
         <a href="">Пусто</a>
