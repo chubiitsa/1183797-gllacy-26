@@ -14,10 +14,10 @@
     <a class="logo">
       <img src="img/logo.svg" alt="Логотип магазина Глэйси" width="154" height="63">
     </a>
-    <ul class="site-nav">
+    <ul class="site-list">
       <li>
         <a href="">Каталог</a>
-        <ul class="catalog-nav display-none">
+        <ul class="submenu">
           <li><a href="#">Новинки</a></li>
           <li><a href="catalog.html">Сливочное</a></li>
           <li><a href="#">Щербеты</a></li>
@@ -30,15 +30,15 @@
     </ul>
     <ul class="user-nav">
       <li>
-        <a href="">Поиск</a>
-        <form class="display-none" action="https://echo.htmlacademy.ru" method="get">
+        <a class="user-nav-trigger" href="">Поиск</a>
+        <form class="user-nav-form" action="https://echo.htmlacademy.ru" method="get">
           <label for="search" class="visually-hidden">Поиск</label>
           <input id="search" type="search" placeholder="Крем-брюле">
         </form>
       </li>
       <li>
-        <a href="">Вход</a>
-        <form class="display-none" action="https://echo.htmlacademy.ru" method="post">
+        <a class="user-nav-trigger" href="">Вход</a>
+        <form class="user-nav-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label for="login" class="visually-hidden">Логин</label>
             <input id="login" type="email" name="email" placeholder="email@example.com">
@@ -49,13 +49,13 @@
           </p>
           <button type="submit">Войти</button>
         </form>
-        <div class="display-none">
+        <div class="login-links">
           <a href="">Забыли пароль?</a>
           <a href="">Новая регистрация</a>
         </div>
       </li>
-      <li>
-        <a href="">Пусто</a>
+      <li class="header-cart">
+        <a class="user-nav-trigger" href="">Пусто</a>
       </li>
     </ul>
   </nav>
@@ -66,9 +66,9 @@
 
 <main>
   <!-- slider -->
-  <div class="special-offer display-none">
+  <div class="special-offer">
     <p>Крем-брюле и пломбир с малиновым джемом</p>
-    <button class="button special-offer-button" type="button">Давайте оба!</button>
+    <button class="btn special-offer-button" type="button">Давайте оба!</button>
     <ul>
       <li>
         <a href=""></a>
@@ -86,57 +86,57 @@
     <div class="offer-raspberry">
       <h2>Малинка даром!</h2>
       <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-      <a class="button offer-button" href="">Хочу варенье!</a>
+      <a class="btn offer-button" href="">Хочу варенье!</a>
     </div>
     <div class="offer-chocolate">
       <h2>Шоколадки даром!</h2>
       <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно
         бесплатно.</p>
-      <a class="button offer-button" href="">Хочу шоколадки!</a>
+      <a class="btn offer-button" href="">Хочу шоколадки!</a>
     </div>
   </section>
 
   <section class="items">
-    <ul class="items-list">
+    <ul class="catalog-item">
       <li>
         <a href="">
           <img src="img/product-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
                height="267">
         </a>
         <p>310&#8381;/<span>кг</span></p>
-        <a class="item-name" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        <a class="button items-list-button" href="">Быстрый просмотр</a>
+        <a class="catalog-item-name" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+        <a class="btn catalog-item-btn" href="">Быстрый просмотр</a>
       </li>
       <li>
         <a href="">
           <img src="img/product-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
         </a>
         <p>380&#8381;/<span>кг</span></p>
-        <a class="item-name" href="">Сливочно-кофейное с кусочками шоколада</a>
-        <a class="button items-list-button" href="">Быстрый просмотр</a>
+        <a class="catalog-item-name" href="">Сливочно-кофейное с кусочками шоколада</a>
+        <a class="btn catalog-item-btn" href="">Быстрый просмотр</a>
       </li>
       <li class="item">
         <a href="">
           <img src="img/product-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
         </a>
         <p>355&#8381;/<span>кг</span></p>
-        <a class="item-name" href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
-        <a class="button items-list-button" href="">Быстрый просмотр</a>
+        <a class="catalog-item-name" href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
+        <a class="btn catalog-item-btn" href="">Быстрый просмотр</a>
       </li>
       <li class="item">
         <a href="">
           <img src="img/product-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
         </a>
         <p>415&#8381;/<span>кг</span></p>
-        <a class="item-name" href="">Сливочное крем-брюле с карамельной подливкой</a>
-        <a class="button items-list-button" href="">Быстрый просмотр</a>
+        <a class="catalog-item-name" href="">Сливочное крем-брюле с карамельной подливкой</a>
+        <a class="btn catalog-item-btn" href="">Быстрый просмотр</a>
       </li>
     </ul>
   </section>
 
   <section class="about">
     <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
-    <ul>
+    <ul class="about-list">
       <li class="about-item about-item-icecream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и
         проверенных временем технологий.
       </li>
@@ -152,7 +152,7 @@
     </ul>
   </section>
 
-  <article class="blog">
+  <article class="news-blog">
     <h2>Новое в нашем блоге</h2>
     <a href="">10 способов сервировки фруктовых щербетов к столу</a>
   </article>
@@ -164,7 +164,7 @@
     <form action="https://echo.htmlacademy.ru" method="post">
       <label for="subscribe-email" class="visually-hidden">Введите ваш e-mail, чтобы подписаться на рассылку </label>
         <input id="subscribe-email" type="email" placeholder="email@example.com">
-      <button class="button" type="submit">Отправить</button>
+      <button class="btn" type="submit">Отправить</button>
     </form>
   </div>
 
@@ -174,7 +174,7 @@
     <p>Для заказов по телефону:
       <a class="contacts-big-text" href="tel: +78124502525">8 812 450-25-25</a> (с 10 до 20 ежедневно)
     </p>
-    <a class="button" href="">Форма обратной связи</a>
+    <a class="btn" href="">Форма обратной связи</a>
   </div>
 
   <div class="map">
@@ -185,26 +185,26 @@
 
 <footer class="main-footer">
   <ul class="socials">
-    <li><a class="twitter" href="" aria-label="Глэйси в Твиттере"></a></li>
-    <li><a class="insta" href="" aria-label="Глэйси в Инстаграм"></a></li>
-    <li><a class="fb" href="" aria-label="Глэйси на Фэйсбуке"></a></li>
-    <li><a class="vk" href="" aria-label="Глэйси во Вконтакте"></a></li>
+    <li><a class="social-link social-link-tw" href="" aria-label="Глэйси в Твиттере"></a></li>
+    <li><a class="social-link social-link-insta" href="" aria-label="Глэйси в Инстаграм"></a></li>
+    <li><a class="social-link social-link-fb" href="" aria-label="Глэйси на Фэйсбуке"></a></li>
+    <li><a class="social-link social-link-vk" href="" aria-label="Глэйси во Вконтакте"></a></li>
   </ul>
-  <ul class="more">
+  <ul class="main-footer-list">
     <li><a href="">Для поставщиков</a></li>
     <li><a href="">О производстве</a></li>
     <li><a href="">Наши документы</a></li>
     <li><a href="">Экологические старндарты</a></li>
   </ul>
   <p class="copyright">
-    <a href="https://htmlacademy.ru/intensive/htmlcss">
+    <a class="copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
       <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="108" height="39">
     </a>
-    Сделано в <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
+    Сделано в <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
   </p>
 </footer>
 
-<section class="popup display-none">
+<section class="popup">
   <h2>Мы обязательно вам ответим!</h2>
   <form action="https://echo.htmlacademy.ru" method="post">
     <p>
