@@ -36,9 +36,7 @@ a {
 .user-nav-form,
 .login-links,
 .header-cart-form,
-.catalog-filter,
-.popup,
-.special-offer {
+.popup {
   display: none;
 }
 
@@ -61,7 +59,7 @@ a {
   height: 63px ;
 }
 
-.site-list a {
+.menu a {
   font-weight: bold;
   line-height: 18px;
   text-decoration: underline;
@@ -74,19 +72,19 @@ a {
   font-weight: 500;
 }
 
-.site-list,
+.menu,
 .user-nav,
 .submenu {
   list-style: none;
 }
 
-.site-list a,
+.menu a,
 .user-nav a {
   color: #ffffff;
 }
 
-.site-list a:hover,
-.site-list a:focus,
+.menu a:hover,
+.menu a:focus,
 .user-nav a:hover,
 .user-nav a:focus {
   color: #000000;
@@ -126,16 +124,31 @@ background-color: #fbded7;
   line-height: 24px;
 }
 
+.special-offer {
+  background-image: url("../img/slider-image-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.special-offer-name {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.special-offer-button {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.special-offer-slider {
+  list-style: none;
+}
+
 .offer {
   background-repeat: no-repeat;
   background-size: cover;
-}
-.offer h2 {
-  font-size: 35px;
-}
-
-.offer p {
-  font-size: 18px;
 }
 
 .offer-raspberry {
@@ -146,21 +159,36 @@ background-color: #fbded7;
   background-image: url("../img/chocolate-bg.jpg");
 }
 
-.catalog-item {
-  list-style: none;
+.offer h2 {
+  font-size: 35px;
 }
 
-.catalog-item img {
+.offer p {
+  font-size: 18px;
+}
+
+.catalog-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog-list li {
+  width: 267px;
+}
+
+.catalog-list img {
   border-radius: 50%;
 }
 
-.catalog-item p {
+.catalog-list p {
   font-size: 45px;
   line-height: 45px;
   font-weight: bold;
 }
 
-.catalog-item span {
+.catalog-list span {
   font-size: 30px;
 }
 
@@ -272,16 +300,16 @@ input:focus {
   color: #323232;
 }
 
-.contacts p {
-  font-size: 14px;
-  line-height: 20px;
-}
-
 .contacts-big-text {
   font-size: 18px;
   line-height: 24px;
   color: #000000;
   font-weight: bold;
+}
+
+.contacts p {
+  font-size: 14px;
+  line-height: 20px;
 }
 
 /* footer */
@@ -371,6 +399,35 @@ input:focus {
   line-height: 41px;
 }
 
+.catalog-filter-field {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  border: 0;
+}
+
+.catalog-filter-btn {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.catalog-filter-btn:hover,
+.catalog-filter-btn:focus {
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.catalog-filter-btn:active {
+  color: #000000;
+  background-color: #eaeaea;
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+}
+
 .pagination {
   list-style: none;
 }
@@ -387,4 +444,78 @@ input:focus {
 .pagination a:active {
   color: #000000;
   background-color: #ffffff;
+}
+
+/* сетка */
+
+.layout-positioner {
+  width: 1146px;
+  margin: 0 auto;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.user-nav {
+  margin-left: auto;
+}
+
+.about {
+  width: 1146px;
+}
+
+.offer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offer-raspberry {
+  flex-basis: 50%;
+  margin-right: 26px;
+  min-height: 230px;
+}
+
+.offer-chocolate {
+  flex-basis: 50%;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.news-blog {
+  flex-basis: 50%;
+  min-height: 220px;
+  margin-right: 26px;
+}
+
+.subscribe {
+  flex-basis: 50%;
+}
+
+.main-footer {
+  width: 1146px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.socials {
+  margin-right: 214px;
+}
+
+.copyright {
+  margin-left: auto;
+}
+
+.catalog-filter {
+  width: 879px;
+  height: 140px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
 }

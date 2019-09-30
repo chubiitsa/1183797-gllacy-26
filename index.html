@@ -9,12 +9,10 @@
 </head>
 <body>
 
-<header>
+<header class="layout-positioner">
   <nav class="main-nav">
-    <a class="logo">
-      <img src="img/logo.svg" alt="Логотип магазина Глэйси" width="154" height="63">
-    </a>
-    <ul class="site-list">
+    <img src="img/logo.svg" alt="Логотип магазина Глэйси" width="154" height="63">
+    <ul class="menu">
       <li>
         <a href="">Каталог</a>
         <ul class="submenu">
@@ -30,14 +28,14 @@
     </ul>
     <ul class="user-nav">
       <li>
-        <a class="user-nav-trigger" href="">Поиск</a>
+        <a class="user-nav-trigger search-link" href="">Поиск</a>
         <form class="user-nav-form" action="https://echo.htmlacademy.ru" method="get">
           <label for="search" class="visually-hidden">Поиск</label>
           <input id="search" type="search" placeholder="Крем-брюле">
         </form>
       </li>
       <li>
-        <a class="user-nav-trigger" href="">Вход</a>
+        <a class="user-nav-trigger login-link" href="">Вход</a>
         <form class="user-nav-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label for="login" class="visually-hidden">Логин</label>
@@ -55,7 +53,7 @@
         </div>
       </li>
       <li class="header-cart">
-        <a class="user-nav-trigger" href="">Пусто</a>
+        <a class="user-nav-trigger cart-link" href="">Пусто</a>
       </li>
     </ul>
   </nav>
@@ -64,12 +62,12 @@
   </p>
 </header>
 
-<main>
+<main class="layout-positioner">
   <!-- slider -->
   <div class="special-offer">
-    <p>Крем-брюле и пломбир с малиновым джемом</p>
+    <p class="special-offer-name">Крем-брюле и пломбир с малиновым джемом</p>
     <button class="btn special-offer-button" type="button">Давайте оба!</button>
-    <ul>
+    <ul class="special-offer-slider">
       <li>
         <a href=""></a>
       </li>
@@ -97,34 +95,33 @@
   </section>
 
   <section class="items">
-    <ul class="catalog-item">
-      <li>
-        <a href="">
-          <img src="img/product-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
-               height="267">
+    <ul class="catalog-list">
+      <li class="catalog-item">
+        <a class="catalog-item-photo" href="">
+          <img src="img/product-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
         </a>
         <p>310&#8381;/<span>кг</span></p>
         <a class="catalog-item-name" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         <a class="btn catalog-item-btn" href="">Быстрый просмотр</a>
       </li>
-      <li>
-        <a href="">
+      <li class="catalog-item">
+        <a class="catalog-item-photo" href="">
           <img src="img/product-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
         </a>
         <p>380&#8381;/<span>кг</span></p>
         <a class="catalog-item-name" href="">Сливочно-кофейное с кусочками шоколада</a>
         <a class="btn catalog-item-btn" href="">Быстрый просмотр</a>
       </li>
-      <li class="item">
-        <a href="">
+      <li class="catalog-item">
+        <a class="catalog-item-photo" href="">
           <img src="img/product-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
         </a>
         <p>355&#8381;/<span>кг</span></p>
         <a class="catalog-item-name" href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
         <a class="btn catalog-item-btn" href="">Быстрый просмотр</a>
       </li>
-      <li class="item">
-        <a href="">
+      <li class="catalog-item">
+        <a class="catalog-item-photo" href="">
           <img src="img/product-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
         </a>
         <p>415&#8381;/<span>кг</span></p>
@@ -137,40 +134,36 @@
   <section class="about">
     <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
     <ul class="about-list">
-      <li class="about-item about-item-icecream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и
-        проверенных временем технологий.
+      <li class="about-item about-item-icecream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
       </li>
-      <li class="about-item about-item-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные
-        ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+      <li class="about-item about-item-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
       </li>
-      <li class="about-item about-item-cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас
-        связывает долговременное сотрудничество.
+      <li class="about-item about-item-cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
       </li>
-      <li class="about-item about-item-therm">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому
-        растаять в пути и позволяет сохранить превосходный вкус.
+      <li class="about-item about-item-therm">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
       </li>
     </ul>
   </section>
 
-  <article class="news-blog">
-    <h2>Новое в нашем блоге</h2>
-    <a href="">10 способов сервировки фруктовых щербетов к столу</a>
-  </article>
+  <div class="wrapper">
+    <div class="news-blog">
+      <h2>Новое в нашем блоге</h2>
+      <a href="">10 способов сервировки фруктовых щербетов к столу</a>
+    </div>
 
-  <div class="subscribe">
-    <h2 class="visually-hidden">Подписка</h2>
-    <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем
-      не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <label for="subscribe-email" class="visually-hidden">Введите ваш e-mail, чтобы подписаться на рассылку </label>
+    <div class="subscribe">
+      <h2 class="visually-hidden">Подписка</h2>
+      <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="subscribe-email" class="visually-hidden">Введите ваш e-mail, чтобы подписаться на рассылку </label>
         <input id="subscribe-email" type="email" placeholder="email@example.com">
-      <button class="btn" type="submit">Отправить</button>
-    </form>
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+    </div>
   </div>
-
   <div class="contacts">
     <p>Адрес главного офиса и офлайн-магазина:
-    <b class="contacts-big-text">ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+      <b class="contacts-big-text">ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
     <p>Для заказов по телефону:
       <a class="contacts-big-text" href="tel: +78124502525">8 812 450-25-25</a> (с 10 до 20 ежедневно)
     </p>
@@ -183,7 +176,7 @@
 
 </main>
 
-<footer class="main-footer">
+<footer class="main-footer layout-positioner">
   <ul class="socials">
     <li><a class="social-link social-link-tw" href="" aria-label="Глэйси в Твиттере"></a></li>
     <li><a class="social-link social-link-insta" href="" aria-label="Глэйси в Инстаграм"></a></li>
