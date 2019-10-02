@@ -9,10 +9,11 @@
 </head>
 <body>
 
-<header class="layout-positioner">
+<div class="container">
+<header>
   <nav class="main-nav">
     <img src="img/logo.svg" alt="Логотип магазина Глэйси" width="154" height="63">
-    <ul class="menu">
+    <ul class="main-nav-list">
       <li>
         <a href="">Каталог</a>
         <ul class="submenu">
@@ -62,7 +63,7 @@
   </p>
 </header>
 
-<main class="layout-positioner">
+<main>
   <!-- slider -->
   <div class="special-offer">
     <p class="special-offer-name">Крем-брюле и пломбир с малиновым джемом</p>
@@ -80,18 +81,19 @@
     </ul>
   </div>
 
-  <section class="offer">
-    <div class="offer-raspberry">
-      <h2>Малинка даром!</h2>
+  <section class="offer-wrapper">
+    <div class="offer offer-raspberry">
+      <h2 class="offer-name">Малинка даром!</h2>
       <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
       <a class="btn offer-button" href="">Хочу варенье!</a>
     </div>
-    <div class="offer-chocolate">
-      <h2>Шоколадки даром!</h2>
+    <div class="offer offer-chocolate">
+      <h2 class="offer-name">Шоколадки даром!</h2>
       <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно
         бесплатно.</p>
       <a class="btn offer-button" href="">Хочу шоколадки!</a>
     </div>
+
   </section>
 
   <section class="items">
@@ -132,22 +134,22 @@
   </section>
 
   <section class="about">
-    <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
+    <h2 class="about-title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
     <ul class="about-list">
       <li class="about-item about-item-icecream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
       </li>
-      <li class="about-item about-item-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-      </li>
       <li class="about-item about-item-cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+      </li>
+      <li class="about-item about-item-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
       </li>
       <li class="about-item about-item-therm">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
       </li>
     </ul>
   </section>
 
-  <div class="wrapper">
+  <div class="feed-wrapper">
     <div class="news-blog">
-      <h2>Новое в нашем блоге</h2>
+      <h2 class="news-blog-title">Новое в нашем блоге</h2>
       <a href="">10 способов сервировки фруктовых щербетов к столу</a>
     </div>
 
@@ -169,14 +171,18 @@
     </p>
     <a class="btn" href="">Форма обратной связи</a>
   </div>
+</main>
 
+</div>
+
+<div class="map-container">
   <div class="map">
     <img src="img/map.png" alt="Карта проезда к адресу ул. Большая Конюшенная 19/8" width="1200" height="430">
   </div>
+</div>
 
-</main>
-
-<footer class="main-footer layout-positioner">
+<div class="container">
+<footer class="main-footer">
   <ul class="socials">
     <li><a class="social-link social-link-tw" href="" aria-label="Глэйси в Твиттере"></a></li>
     <li><a class="social-link social-link-insta" href="" aria-label="Глэйси в Инстаграм"></a></li>
@@ -196,6 +202,7 @@
     Сделано в <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
   </p>
 </footer>
+</div>
 
 <section class="popup">
   <h2>Мы обязательно вам ответим!</h2>
