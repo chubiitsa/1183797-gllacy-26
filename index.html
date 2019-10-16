@@ -34,7 +34,7 @@
           <li><a class="main-nav-link" href="">О Компании</a></li>
         </ul>
         <ul class="user-nav">
-          <li class="user-nav-search">
+          <li class="user-nav-item user-nav-search">
             <a class="user-nav-link search-link" href="">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
                    viewBox="0 0 17 17">
@@ -43,12 +43,12 @@
               </svg>
             </a>
 
-            <form class="user-nav-form user-nav-form-search" action="https://echo.htmlacademy.ru" method="get">
+            <form class="user-nav-form form-search" action="https://echo.htmlacademy.ru" method="get">
               <label for="search" class="visually-hidden">Поиск</label>
               <input id="search" type="search" placeholder="Крем-брюле">
             </form>
           </li>
-          <li class="user-nav-login">
+          <li class="user-nav-item user-nav-login">
             <a class="user-nav-link login-link" href="">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"
                    viewBox="0 0 21 19">
@@ -59,7 +59,7 @@
                 </g>
               </svg>
               Вход</a>
-            <form class="user-nav-form user-nav-form-login" action="https://echo.htmlacademy.ru" method="post">
+            <form class="user-nav-form form-login" action="https://echo.htmlacademy.ru" method="post">
               <p>
                 <label for="login" class="visually-hidden">Логин</label>
                 <input id="login" type="email" name="email" placeholder="email@example.com">
@@ -75,7 +75,7 @@
                 </div>
             </form>
           </li>
-          <li class="user-nav-header-cart">
+          <li class=" user-nav-item user-nav-header-cart">
             <a class="user-nav-link cart-link" href="">
               <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
                 <g fill="#FFF">
@@ -106,15 +106,15 @@
         <ul class="special-offer-list">
           <li class="special-offer-item" id="special-offer-1">
             <h3 class="special-offer-name">Крем-брюле и пломбир с малиновым джемом</h3>
-            <button class="btn special-offer-btn" type="button">Давайте оба!</button>
+            <a href="" class="btn special-offer-btn">Давайте оба!</a>
           </li>
           <li class="special-offer-item" id="special-offer-2">
             <h3 class="special-offer-name">Шоколадный пломбир и лимонный сорбет</h3>
-            <button class="btn special-offer-btn" type="button">Давайте оба!</button>
+            <a href="" class="btn special-offer-btn">Давайте оба!</a>
           </li>
           <li class="special-offer-item" id="special-offer-3">
             <h3 class="special-offer-name">Пломбир с помадкой и клубничный щербет</h3>
-            <button class="btn special-offer-btn" type="button">Давайте оба!</button>
+            <a href="" class="btn special-offer-btn">Давайте оба!</a>
           </li>
         </ul>
       </div>
@@ -137,8 +137,8 @@
       <section class="catalog-list">
         <h2 class="visually-hidden">Хиты продаж</h2>
         <ul class="catalog-list">
-          <li class="catalog-item">
-            <a class="catalog-item-photo hit-item" href="">
+          <li class="catalog-item hit-item">
+            <a class="catalog-item-photo" href="">
               <img src="img/product-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
                    height="267">
             </a>
@@ -146,16 +146,16 @@
             <a class="catalog-item-name" href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             <a class="btn catalog-item-btn" href="">Быстрый просмотр</a>
           </li>
-          <li class="catalog-item">
-            <a class="catalog-item-photo hit-item" href="">
+          <li class="catalog-item hit-item">
+            <a class="catalog-item-photo" href="">
               <img src="img/product-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
             </a>
             <p class="catalog-item-price">380&#8381;<span>/кг</span></p>
             <a class="catalog-item-name" href="">Сливочно-кофейное с кусочками шоколада</a>
             <a class="btn catalog-item-btn" href="">Быстрый просмотр</a>
           </li>
-          <li class="catalog-item">
-            <a class="catalog-item-photo hit-item" href="">
+          <li class="catalog-item hit-item">
+            <a class="catalog-item-photo" href="">
               <img src="img/product-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267"
                    height="267">
             </a>
@@ -163,8 +163,8 @@
             <a class="catalog-item-name" href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
             <a class="btn catalog-item-btn" href="">Быстрый просмотр</a>
           </li>
-          <li class="catalog-item">
-            <a class="catalog-item-photo hit-item" href="">
+          <li class="catalog-item hit-item">
+            <a class="catalog-item-photo" href="">
               <img src="img/product-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
             </a>
             <p class="catalog-item-price">415&#8381;<span>/кг</span></p>
