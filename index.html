@@ -6,6 +6,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=603dc511-8efe-43bf-8a28-9835de30ef82&lang=ru_RU" type="text/javascript">
+  </script>
 </head>
 <body>
 
@@ -215,7 +217,7 @@
         </div>
       </div>
       <div class="contacts">
-        <p>Адрес главного офиса и офлайн-магазина:
+        <p>Адрес главного офиса и офлайн&#8209;магазина:
           <b class="contacts-big-text">ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
         <p>Для заказов по телефону:
           <a class="contacts-big-text" href="tel: +78124502525">8 812 450-25-25</a> (с 10 до 20 ежедневно)
@@ -226,8 +228,7 @@
 
   </div>
 
-  <div class="map">
-    <img src="img/map.png" alt="Карта проезда к адресу ул. Большая Конюшенная 19/8" width="1200" height="430">
+  <div class="map" id="yandex-map">
   </div>
 
   <div class="container">
@@ -253,26 +254,98 @@
     </footer>
   </div>
 
-  <section class="modal modal-feedback">
-    <h2 class="modal-name">Мы обязательно вам ответим!</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label for="contact-name" class="visually-hidden">Введите свои имя и фамилию</label>
-        <input class="modal-input" id="contact-name" type="text" name="contact-name" placeholder="Имя Фамилия">
-      </p>
-      <p>
-        <label for="contact-email" class="visually-hidden">Введите свой e-mail</label>
-        <input class="modal-input" id="contact-email" type="email" name="contact-email" placeholder="email@example.com">
-      </p>
-      <p>
-        <label for="comment-text" class="visually-hidden">Внесите комментарий</label>
-        <textarea class="modal-input" id="comment-text" name="comment-text" placeholder="В свободной форме"></textarea>
-      </p>
-      <button class="btn modal-btn" type="submit">Отправить</button>
-    </form>
-    <button class="modal-close-btn" type="button" aria-label="Закрыть форму обратной связи"></button>
-  </section>
-
+  <div class="modal-overlay">
+    <section class="modal modal-feedback">
+      <h2 class="modal-name">Мы обязательно вам ответим!</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="contact-name" class="visually-hidden">Введите свои имя и фамилию</label>
+          <input class="modal-input" id="contact-name" type="text" name="contact-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="contact-email" class="visually-hidden">Введите свой e-mail</label>
+          <input class="modal-input" id="contact-email" type="email" name="contact-email"
+                 placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="comment-text" class="visually-hidden">Внесите комментарий</label>
+          <textarea class="modal-input" id="comment-text" name="comment-text"
+                    placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="btn modal-btn" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close-btn" type="button" aria-label="Закрыть форму обратной связи"></button>
+    </section>
+  </div>
 </div>
+
+<script>
+
+    const link = document.querySelector(".contacts-btn");
+    const popup = document.querySelector(".modal-overlay");
+    const close = document.querySelector(".modal-close-btn");
+    const contactName = document.getElementById("contact-name");
+
+
+    link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+        contactName.focus();
+        console.log(contactName)
+    });
+
+    close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+        contactName.blur();
+    });
+
+
+</script>
+
+<script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+
+    function init() {
+        // Создание карты.
+        var myMap = new ymaps.Map("yandex-map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [59.938631, 30.323055],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 17,
+            controls: []
+
+        });
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'ул. Большая Конюшенная 19/8, Санкт-Петербург',
+            balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: '/1183797-gllacy-26/img/pin.png',
+            // Размеры метки.
+            iconImageSize: [218, 142],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-40, -140]
+        });
+
+
+        myMap.geoObjects
+            .add(myPlacemark);
+    }
+</script>
+
 </body>
 </html>
+
+

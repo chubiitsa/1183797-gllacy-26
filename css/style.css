@@ -119,9 +119,9 @@ a {
 }
 
 .btn:active {
-  background-image: -webkit-gradient( linear, left top, right top, from(rgb(242,104,67)), to(rgb(231,74,53)));
-  background-image: -o-linear-gradient( left, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -webkit-gradient( linear, left top, right top, from(#f26843), to(#e74a35));
+  background-image: -o-linear-gradient( left, #f26843 0%, #e74a35 100%);
+  background-image: linear-gradient( 90deg, #f26843 0%, #e74a35 100%);
   -webkit-box-shadow: inset 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
   box-shadow: inset 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 }
@@ -164,12 +164,12 @@ a {
   -ms-flex-align: center;
   align-items: center;
   width: 600px;
-  margin-left: 10px;
+  margin-left: 9px;
 }
 
 .main-nav-link {
   display: block;
-  padding: 7px 14px;
+  padding: 6px 14px 9px;
   color: #ffffff;
   font-weight: bold;
   line-height: 18px;
@@ -179,20 +179,19 @@ a {
 }
 
 .main-nav-link:active {
-  -webkit-box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
-  box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
+  -webkit-box-shadow: inset 0px 2px 1px 0px #696969;
+  box-shadow: inset 0px 2px 1px 0px #696969;
 }
-
-
 
 /* ---------------------------------------------------------------------- submenu start */
 
 .submenu {
   position: absolute;
-  top: 36px;
+  top: 37px;
   left: -5px;
   z-index: 3;
   width: 142px;
+  padding-top: 2px;
   background-color: #f8f7f4;
   border-radius: 5px;
   -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -230,7 +229,7 @@ a {
 
 .submenu-link {
   display: block;
-  padding: 5px 10px 5px 18px;
+  padding: 6px 10px 3px 19px;
   font-size: 14px;
   color: #323232;
   background-color: #f8f7f4;
@@ -238,8 +237,13 @@ a {
 
 .submenu-link-bold {
   position: relative;
-  padding-bottom: 9px;
+  padding-top: 3px;
+  padding-bottom: 10px;
   font-weight: bold;
+}
+
+.submenu li:last-child {
+  padding-bottom: 7px;
 }
 
 .submenu-link-bold::before {
@@ -264,6 +268,14 @@ a {
 .submenu-link:active {
   color: #323232;
   background-color: #f6b5a5;
+}
+
+.submenu-link-current,
+.submenu-link-current:hover,
+.submenu-link-current:focus,
+.submenu-link-current:active{
+  color: #ffffff;
+  background-color: #d07058;
 }
 
 /* ----------------------------------------------------------------------------- submenu end */
@@ -295,7 +307,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
   height: 31px;
-  padding: 0 10px;
+  padding: 0 12px;
   font-size: 14px;
   font-weight: bold;
   color: #ffffff;
@@ -363,7 +375,7 @@ a {
 
 .user-nav-form {
   position: absolute;
-  right: 0;
+  right: -1px;
   top: 35px;
   z-index: 3;
   padding: 20px 15px;
@@ -381,6 +393,7 @@ a {
 
 .form-search {
   width: 339px;
+  right: 1px;
 }
 
 .form-login {
@@ -392,8 +405,8 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 274px;
-  padding: 20px 20px;
+  width: 275px;
+  padding: 20px 18px 21px;
 }
 
 .form-login p {
@@ -473,6 +486,10 @@ a {
   bottom: -8px;
 }
 
+.user-nav-search {
+  width: 31px;
+}
+
 .user-nav-search::before {
   width: 42px;
 }
@@ -515,7 +532,7 @@ a {
 .user-nav-cart-table {
   border-bottom: 1px solid #c9c9c6;
   table-layout: fixed;
-  width: 514px;
+  width: 512px;
   border-collapse: collapse;
   vertical-align: baseline;
 }
@@ -551,7 +568,7 @@ a {
 }
 
 .cart-price {
-  width: 124px;
+  width: 122px;
   padding-right: 10px;
 }
 
@@ -571,7 +588,7 @@ a {
 .user-nav-cart-btn {
   margin-top: 13px;
   margin-left: auto;
-  padding: 9px 17px 12px;
+  padding: 8px 16px 12px;
   font-size: 18px;
   line-height: 26px;
 }
@@ -584,14 +601,15 @@ a {
   border: none;
   cursor: pointer;
   background-color: #f7f7f4;
+  transform: translate(-5px, -5px);
 }
 
 .cart-remove-btn::before,
 .cart-remove-btn::after {
   content: "";
   position: absolute;
-  top: 7px;
-  right: 6px;
+  top: 68%;
+  right: 50%;
   width: 15px;
   height: 2px;
   background-color: #231F20;
@@ -600,13 +618,13 @@ a {
 .cart-remove-btn::before {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+  transform: translate(-50%,-50%) rotate(45deg);
 }
 
 .cart-remove-btn::after {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  transform: translate(-50%,-50%) rotate(-45deg) ;
 }
 
 /* -----------------------------------------------------------------------    user-nav end */
@@ -655,17 +673,22 @@ a {
 .breadcrumbs a {
   position: relative;
   display: block;
-  margin-right: 20px;
   color: #ffffff;
   list-style: none;
   text-decoration: underline;
 }
 
-.breadcrumbs a::after {
+.breadcrumbs li {
+  position: relative;
+  padding-right: 20px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
   content: "»";
   position: absolute;
-  right: -13px;
+  right: 6px;
   top: 0;
+  text-decoration: none;
 }
 
 .breadcrumbs a:hover,
@@ -807,6 +830,7 @@ a {
 
 .offer-btn {
   display: inline-block;
+  vertical-align: middle;
   margin-left: auto;
   padding: 10px 23px;
   line-height: 26px;
@@ -843,7 +867,7 @@ a {
   padding-bottom: 10px;
 }
 
-.catalog-filter-field {
+.catalog-filter-set {
   padding: 0;
   margin: 0;
   margin-bottom: 11px;
@@ -858,7 +882,7 @@ a {
   margin-bottom: 3px;
 }
 
-.catalog-filter-group {
+.catalog-filter-wrapper {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 17px;
   padding: 9px 4px 9px 19px;
@@ -873,7 +897,8 @@ a {
 }
 
 .checkbox-filter {
-  padding-left: 15px;
+  padding-left: 16px;
+  padding-right: 0px;
 }
 
 
@@ -892,13 +917,13 @@ a {
 }
 
 .checkbox-filter label {
-  padding: 0 22px 0 32px;
+  padding: 0 21px 0 32px;
 }
 
 .catalog-filter-sorting {
   width: 193px;
   height: 36px;
-  padding: 0 10px;
+  padding: 0 10px 0 11px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -909,8 +934,19 @@ a {
   border: none;
   border-radius: 17px;
   color: #ffffff;
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+}
+
+.catalog-filter-sorting:hover,
+.catalog-filter-sorting:focus {
+  color: #323232;
+  background-image: url("../img/icon-down-dir-gray.svg");
+}
+
+.catalog-filter-sorting::-ms-expand {
+  display: none;
 }
 
 .catalog-filter-sorting option {
@@ -940,7 +976,7 @@ a {
 
 .range-toggle {
   position: absolute;
-  top: 8px;
+  top: 9px;
   width: 20px;
   height: 20px;
   padding: 0;
@@ -952,14 +988,15 @@ a {
 }
 
 .range-toggle-min {
-  left: 35px;
+  left: 36px;
 }
 
 .range-toggle-max {
-  left: 133px;
+  left: 134px;
 }
 
-.range-toggle:hover {
+.range-toggle:hover,
+.range-toggle:focus {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -1003,13 +1040,18 @@ input:disabled + .radio::before {
 
 .radio:hover::before,
 input:checked + .radio:hover::after {
-  border-color: rgba(255, 255, 255, 1);
+  border-color: #ffffff;
+  cursor: pointer;
+}
+
+.radio-filter input[type="radio"]:focus + label::before,
+.radio-filter input[type="radio"]:focus + label::after {
+  border-color: #ffffff;
 }
 
 .radio-filter input[type="radio"]:focus + label::before {
-  outline: rgb(59, 153, 252) auto 5px;
+  outline: #3b99fc auto 5px;
 }
-
 .checkbox::before {
   position: absolute;
   top: 0;
@@ -1047,6 +1089,7 @@ input:checked + .checkbox::after {
 .checkbox:hover::before,
 input:checked + .checkbox:hover::after {
   opacity: 1;
+  cursor: pointer;
 }
 
 input:disabled + .checkbox:before,
@@ -1058,7 +1101,8 @@ input:checked:disabled + .checkbox:hover::after {
 
 .checkbox-filter input[type="checkbox"]:focus + label::before,
 .checkbox-filter input[type="checkbox"]:focus + label::after {
-  outline: rgb(59, 153, 252) auto 5px;
+  outline: #3b99fc auto 5px;
+  opacity: 1;
 }
 
 .catalog-filter-btn {
@@ -1072,6 +1116,7 @@ input:checked:disabled + .checkbox:hover::after {
   border-radius: 20px;
   -ms-flex-item-align: end;
   align-self: flex-end;
+  cursor: pointer;
 }
 
 .catalog-filter-btn:hover,
@@ -1143,12 +1188,13 @@ input:checked:disabled + .checkbox:hover::after {
 
 .catalog-item-price {
   z-index: 2;
-  margin: -64px 0px 21px -1px;
+  margin: -65px 0px 21px -2px;
   text-align: left;
   font-size: 45px;
   line-height: 45px;
   font-weight: bold;
   text-shadow: 0px 1px 3px rgba(52, 53, 56, 0.5);
+  cursor: default;
 }
 
 .catalog-item-price span {
@@ -1157,7 +1203,6 @@ input:checked:disabled + .checkbox:hover::after {
 
 .catalog-item-name {
   max-width: 100%;
-  margin-top: -1px;
   text-align: center;
   color: #ffffff;
   -webkit-text-decoration: underline rgba(255, 255, 255, 0.2);
@@ -1394,26 +1439,17 @@ input:checked:disabled + .checkbox:hover::after {
   position: absolute;
   right: 0;
   bottom: -381px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   background-color: #ffffff;
   color: #323232;
   width: 302px;
   border-radius: 15px;
-  padding: 30px 25px;
+  padding: 29px 25px 30px;
+  z-index: 3;
 }
 
 .contacts p {
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 25px;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1423,15 +1459,17 @@ input:checked:disabled + .checkbox:hover::after {
   line-height: 24px;
   color: #000000;
   font-weight: bold;
+  margin-bottom: -7px;
 }
 
 a.contacts-big-text {
-  margin: 4px 0 0;
+  margin: 4px 0 2px;
 }
 
 .contacts-btn {
-  margin-top: 10px;
-  padding: 10px 19px 11px;
+  display: block;
+  margin-top: 20px;
+  padding: 7px 27px 12px;
   line-height: 26px;
 }
 
@@ -1439,6 +1477,10 @@ a.contacts-big-text {
   width: 100%;
   height: 430px;
   background-color: #ece5c8;
+  background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .map img {
@@ -1486,14 +1528,16 @@ a.contacts-big-text {
 
 .prev-page::before,
 .last-page::before {
+  display: block;
   content: "";
   width: 9px;
   height: 9px;
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid #ffffff;
+
 }
 
 .prev-page::before {
-  border-left: 1px solid rgb(255, 255, 255);
+  border-left: 1px solid #ffffff;
   opacity: 0.2;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1501,7 +1545,7 @@ a.contacts-big-text {
 }
 
 .last-page:before {
-  border-right: 1px solid rgb(255, 255, 255);
+  border-right: 1px solid #ffffff;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -1566,8 +1610,9 @@ a.contacts-big-text {
   height: 38px;
   margin-right: 11px;
   background-repeat: no-repeat;
-  background-size: cover;
-  border: 3px solid rgba(255, 255, 255, 0.5);
+  background-size: 32px 32px;
+  background-position: center;
+  border: 5px solid rgba(255, 255, 255, 0.5);
   opacity: 0.8;
   border-radius: 50%;
 }
@@ -1677,11 +1722,23 @@ a.contacts-big-text {
 
 /* -----------------------------------------------------------------------    modal start */
 
-.modal {
-  position: fixed;
+.modal-overlay {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal {
+  position: fixed;
   color: #353535;
   background-color: #f7f7f4;
   border-radius: 10px;
@@ -1689,6 +1746,26 @@ a.contacts-big-text {
   -webkit-transition: visibility 0.3s ease-out, opacity 0.3s ease-out;
   -o-transition: visibility 0.3s ease-out, opacity 0.3s ease-out;
   transition: visibility 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.modal-show {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
 }
 
 .modal form {
@@ -1722,6 +1799,12 @@ a.contacts-big-text {
   border-radius: 4px;
   color: #989898;
 }
+
+.modal input:focus {
+  border: 2px solid #8fbdec;
+  padding: 11px;
+}
+
 
 .modal textarea {
   width: 428px;
